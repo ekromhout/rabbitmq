@@ -1,0 +1,215 @@
+{
+    "bindings": [
+        {
+            "arguments": {},
+            "destination": "firehose.topic",
+            "destination_type": "exchange",
+            "routing_key": "#",
+            "source": "amq.rabbitmq.trace",
+            "vhost": "/"
+        },
+        {
+            "arguments": {},
+            "destination": "midpoint_hr",
+            "destination_type": "queue",
+            "routing_key": "midpoint_hr",
+            "source": "midpoint",
+            "vhost": "/"
+        },
+        {
+            "arguments": {},
+            "destination": "sor_person",
+            "destination_type": "queue",
+            "routing_key": "sor_person",
+            "source": "sor",
+            "vhost": "/"
+        },
+	{
+            "arguments": {},
+            "destination": "ACCT101",
+            "destination_type": "queue",
+            "routing_key": "basis.courses.ACCT101",
+            "source": "amq.topic",
+            "vhost": "/"
+        },
+        {
+            "arguments": {},
+            "destination": "CS101",
+            "destination_type": "queue",
+            "routing_key": "basis.courses.CS101",
+            "source": "amq.topic",
+            "vhost": "/"
+        },
+        {
+            "arguments": {},
+            "destination": "CS102",
+            "destination_type": "queue",
+            "routing_key": "basis.courses.CS102",
+            "source": "amq.topic",
+            "vhost": "/"
+        },
+        {
+            "arguments": {},
+            "destination": "MATH101",
+            "destination_type": "queue",
+            "routing_key": "basis.courses.MATH101",
+            "source": "amq.topic",
+            "vhost": "/"
+        },
+        {
+            "arguments": {},
+            "destination": "TIER101",
+            "destination_type": "queue",
+            "routing_key": "basis.courses.TIER101",
+            "source": "amq.topic",
+            "vhost": "/"
+        }
+    ],
+    "exchanges": [
+        {
+            "arguments": {},
+            "auto_delete": false,
+            "durable": true,
+            "internal": false,
+            "name": "midpoint",
+            "type": "topic",
+            "vhost": "/"
+        },
+        {
+            "arguments": {},
+            "auto_delete": false,
+            "durable": true,
+            "internal": false,
+            "name": "sor",
+            "type": "topic",
+            "vhost": "/"
+        },
+        {
+            "arguments": {},
+            "auto_delete": false,
+            "durable": true,
+            "internal": false,
+            "name": "firehose.topic",
+            "type": "topic",
+            "vhost": "/"
+        }
+    ],
+    "parameters": [],
+    "permissions": [
+        {
+            "configure": ".*",
+            "read": ".*",
+            "user": "guest",
+            "vhost": "/",
+            "write": ".*"
+        },
+        {
+            "configure": ".*",
+            "read": ".*",
+            "user": "mysql",
+            "vhost": "/",
+            "write": ".*"
+        },
+        {
+            "configure": ".*",
+            "read": ".*",
+            "user": "sis_user",
+            "vhost": "/",
+            "write": ".*"
+        },
+        {
+            "configure": ".*",
+            "read": ".*",
+            "user": "midpoint",
+            "vhost": "/",
+            "write": ".*"
+        }
+    ],
+    "policies": [],
+    "queues": [
+        {
+            "arguments": {},
+            "auto_delete": false,
+            "durable": true,
+            "name": "firehose",
+            "vhost": "/"
+        },
+        {
+            "arguments": {},
+            "auto_delete": false,
+            "durable": true,
+            "name": "midpoint_hr",
+            "vhost": "/"
+        },
+        {
+            "arguments": {},
+            "auto_delete": false,
+            "durable": true,
+            "name": "sor_person",
+            "vhost": "/"
+        },
+	       {
+            "arguments": {},
+            "auto_delete": false,
+            "durable": true,
+            "name": "CS102",
+            "vhost": "/"
+        },
+        {
+            "arguments": {},
+            "auto_delete": false,
+            "durable": true,
+            "name": "CS101",
+            "vhost": "/"
+        },
+        {
+            "arguments": {},
+            "auto_delete": false,
+            "durable": true,
+            "name": "MATH101",
+            "vhost": "/"
+        },
+        {
+            "arguments": {},
+            "auto_delete": false,
+            "durable": true,
+            "name": "ACCT101",
+            "vhost": "/"
+        },
+        {
+            "arguments": {},
+            "auto_delete": false,
+            "durable": true,
+            "name": "TIER101",
+            "vhost": "/"
+        }
+    ],
+    "rabbit_version": "3.3.5",
+    "users": [
+        {
+            "name": "midpoint",
+            "password_hash": "NPRHRH/7sII4hjRpMjx7nGv8Hts=",
+            "tags": ""
+        },
+        {
+            "name": "mysql",
+            "password_hash": "F/ngi0JcvYcXYbloSEISdlYqKfo=",
+            "tags": ""
+        },
+	{
+            "name": "sis_user",
+            "password_hash": "5x3yS5eXea8iSGejDoh4L9Ex2xk=",
+            "tags": "administrator"
+        },
+        {
+            "name": "guest",
+            "password_hash": "4e2kx67rm/QsibQrLcfxyMQMDv4=",
+            "tags": "administrator"
+        }
+    ],
+    "vhosts": [
+        {
+            "name": "/"
+        }
+    ]
+}
